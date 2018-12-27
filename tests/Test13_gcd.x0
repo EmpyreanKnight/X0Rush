@@ -1,0 +1,19 @@
+int gcd(int a, int b) {
+    int temp;
+    while (b != 0) {
+        temp = a % b;
+        a = b;
+        b = temp;
+    }
+    return a;
+}
+
+void main() {
+    int a; int b;
+    do {
+        read a; read b;
+        write a*b/gcd(a, b);
+        write;
+    } while (a > 0);
+}
+    

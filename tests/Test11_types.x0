@@ -1,0 +1,13 @@
+main {
+    // test type conversion
+    int i; char c; bool b;
+    b = c = i = 65;
+    write i; write ' '; write c; write ' '; write b; write;
+    write (int)db; write;
+    write c+(char)1; write;
+    write (char)(c+2); write;
+    write d+3; write;
+    write (i-c)*b || i; write;
+    write b == 65; write;
+	
+}

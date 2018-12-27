@@ -1,0 +1,26 @@
+main {
+    while (1) {
+        if (1) {
+            continue;
+        }
+        if (2) {
+            break;
+        }
+        while (3) {
+            if (4) continue;
+            if (5) break;
+            if (6) continue;
+            if (7) break;
+            if (8) continue;
+            if (9) break;
+            if (10) continue;
+            if (11) break;
+        }
+        if (12) {
+            continue;
+        }
+        if (13) {
+            break;
+        }
+    }
+}

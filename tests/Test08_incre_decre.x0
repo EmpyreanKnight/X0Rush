@@ -1,0 +1,10 @@
+main {
+    int a; int b;
+    b = 1;
+    a = b++;
+    write "a="; write a;
+    write ", b="; write b; write;
+    a = ++b;
+    write "a="; write a;
+    write ", b="; write b; write;
+}

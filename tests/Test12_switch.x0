@@ -1,0 +1,20 @@
+main {
+    int a;
+    int b;
+    a = 1;
+    b = 1;
+    switch (a) {
+        case 1:
+            write b;
+        case 1:
+            b = 2;
+            write b;
+            break;
+        case 3:
+            b = 3;
+            break;
+        default:
+            b = 0;
+            break;
+    }
+}

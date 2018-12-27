@@ -1,0 +1,50 @@
+{
+	const int N = 19260817;
+    int temp[2][2], phib[2][2];
+}
+
+void matrix_fst_mul_1() {
+    int tmp[2][2];
+    int i, j, k;
+    tmp[0][0] = tmp[0][1] = tmp[1][0] = tmp[1][1] = 0;
+    for(i = 0; i < 2; ++i)
+        for(j = 0; j < 2; ++j)
+            for(k = 0; k < 2; ++k)
+                tmp[i][j] = (tmp[i][j] + phib[i][k] * temp[k][j]) % N;
+    for(i = 0; i < 2; ++i)
+        for(j = 0; j < 2; ++j)
+            phib[i][j] = tmp[i][j];
+}
+
+void matrix_fst_mul_2() {
+    int tmp[2][2];
+    int i, j, k;
+    tmp[0][0] = tmp[0][1] = tmp[1][0] = tmp[1][1] = 0;
+    for(i = 0; i < 2; ++i)
+        for(j = 0; j < 2; ++j)
+            for(k = 0; k < 2; ++k)
+                tmp[i][j] = (tmp[i][j] + temp[i][k] * temp[k][j]) % N;
+    for(i = 0; i < 2; ++i)
+        for(j = 0; j < 2; ++j)
+            temp[i][j] = tmp[i][j];
+}
+
+main() {
+    int n, i, j;
+    while (read n != -1) {
+        phib[0][0] = phib[1][1] = 1;
+        phib[0][1] = phib[1][0] = 0;
+        temp[0][0] = temp[0][1] = temp[1][0] = 1;
+        temp[1][1] = 0;
+        while (n) {
+            if (n % 2 == 1) {
+                // phib *= temp
+                matrix_fst_mul_1();
+            }
+            // temp *= temp
+            matrix_fst_mul_2();
+            n = n / 2;
+        }
+        write phib[0][1]; write;
+    }
+}

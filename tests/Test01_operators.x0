@@ -1,0 +1,26 @@
+main {
+    int a; int b; int c; int d;
+    a = 0; b = 1; c = 2; d = 5;
+    write "a="; write a; write;
+    write "b="; write b; write;
+    write "c="; write c; write;
+    write "d="; write d; write;
+    write "a+b="; write a+b; write;
+    write "a-b="; write a-b; write;
+    write "d*c="; write d*c; write;
+    write "d/c="; write d/c; write;
+    write "d%c="; write d%c; write;
+    write "a==b="; write a==b; write;
+    write "a!=b="; write a!=b; write;
+    write "a<b="; write a<b; write;
+    write "a<=b="; write a<=b; write;
+    write "a>b="; write a>b; write;
+    write "a>=b="; write a>=b; write;
+    write "a&&b="; write a&&b; write;
+    write "a||b="; write a||b; write;
+    write "a^b="; write a^b; write;
+    write "-c="; write -c; write;
+    write "!c="; write !c; write;
+    write "odd b="; write odd b; write;
+    write "odd c="; write odd c; write;
+}

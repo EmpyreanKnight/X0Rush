@@ -1,0 +1,13 @@
+main {
+	int a; a = 5;
+    do {
+        write(a);
+        a--;
+    } while (a > 0);
+    write;
+    repeat {
+        write(a);
+        a++;
+    } until (a == 4);
+    write;
+}

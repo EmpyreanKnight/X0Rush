@@ -1,0 +1,55 @@
+{
+	const int MAXN = 1010;
+	int arr[MAXN];
+}
+
+void swap(int a, int b) {
+	int tmp;
+	tmp = arr[a];
+	arr[a] = arr[b];
+	arr[b] = tmp;
+}
+
+int partition(int low, int high) { 
+	int pivot, lastSmall, i;
+	pivot = arr[low]; 
+	lastSmall = low; 
+	for (i = low + 1; i <= high; i++) { 
+		if (arr[i] <= pivot) 
+			swap(++lastSmall, i); 
+	} 
+	swap(low, lastSmall); 
+	return lastSmall; 
+} 
+
+void quickSort(int low, int high) { 
+	int pivotPosition;
+	if (low < high) { 
+		pivotPosition = partition(low, high); 
+		quickSort(low, pivotPosition - 1); 
+		quickSort(pivotPosition + 1, high); 
+	} 
+}
+
+void sort(int n) {
+	quickSort(0, n - 1);
+}
+
+main() {
+	int n, i;
+	read n;
+	if (n <= 0 || n >= MAXN) {
+		exit;
+	}
+	write "Before: ";
+	for (i = 0; i < n; ++i) {
+		read arr[i];
+		write arr[i]; write ' ';
+	}
+	sort(n);
+	write; write "After:  ";
+	for (i = 0; i < n; ++i) {
+		write arr[i]; write ' ';
+	}
+	write;
+}

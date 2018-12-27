@@ -1,0 +1,37 @@
+{
+    const int MAXN = 110;
+    bool isPrime[MAXN];
+}
+
+void sieve_of_eratosthenes() {
+    int i;
+    int j;
+    isPrime[0] = isPrime[1] = false;
+    for (i = 2; i < MAXN; i++) {
+        isPrime[i] = true;
+    }
+    for (i = 2; i < MAXN; i++) {
+        if (isPrime[i]) {
+            for (j = i*i; j < MAXN; j=j+i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+}
+
+main() {
+    int i;
+    int count;
+    count = 0;
+    sieve_of_eratosthenes();
+    for (i = 1; i <= 100; i++) {
+        if (isPrime[i]) {
+            count++;
+            write i; write ' ';
+        }
+    }
+    write;
+    write "Primes in range 1-100: ";
+    write count;
+    write;
+}

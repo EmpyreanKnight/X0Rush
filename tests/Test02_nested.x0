@@ -1,0 +1,21 @@
+main {
+    const int r = 5; 
+    const int c = 7; 
+    int i; int j;
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < c; j++) {
+            if (j % 4 == 3) {
+                continue;
+            }
+            if (i % 3 == 0 && j > 5) {
+                break;
+            }
+            if (odd j) {
+                write '-';
+            } else {
+                write '+';
+            }
+        }
+        write;
+    }
+}

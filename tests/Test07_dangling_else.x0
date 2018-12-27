@@ -1,0 +1,25 @@
+main {
+    int a; int b; int c;
+    a = 1; b = 2; c = 3;
+
+    // should output c, wrong answer is nothing
+    write "test1: ";
+    if (a == 1)
+    if (b != 2)
+        write 'b';
+    else
+        write 'c';
+
+    write;
+
+    /* should output nothing, 
+       wrong answer is c
+    */
+    write "test2: ";
+    if (a != 1)
+    if (b != 2)
+        write 'b';
+    else
+        write 'c';
+    write;
+}
