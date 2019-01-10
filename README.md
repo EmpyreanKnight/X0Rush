@@ -1,5 +1,7 @@
 # X0Rush
-**SPECIAL NOTICE**: Academic honesty is of vital importance. It's **at your own risk** to plagiarize my project since it deliberately contains **multiple errors** before the end of this term. I'll correct these in next term.
+~~**SPECIAL NOTICE**: Academic honesty is of vital importance. It's **at your own risk** to plagiarize my project since it deliberately contains **multiple errors** before the end of this term. I'll correct these in next term.~~
+
+The academic term ended and I have uploaded all the source codes. However, I **warn all ECNU juniors** that plagiarism is unforgivable and should never appear in university, several students who showed dishonesty in this course already received a Fail grade this year. You can try to find inspiration from my work but it's at your own risk barely copy my codes.
 ## Introduction
 This project is for my Compiler Principle Practice course which implemented an interpreted language X0 with PyQt5 based GUI. X0 is a C-like programming language with a great proportion of capability as C language, except float number and pointer functionalities.
 
